@@ -51,25 +51,9 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#resume">Resume</a></li>
-          
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -398,7 +382,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -535,16 +519,100 @@
 
     </section><!-- /Resume Section -->
 
-    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio & Media</h2>
+        <p>Career highlights, projects, presentations, and technical documentation</p>
+      </div><!-- End Section Title -->
 
-    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-grid">
+          <!-- Portfolio Item: Image -->
+          <div class="portfolio-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="portfolio-card-content">
+              <div class="portfolio-image-wrapper">
+                <img src="assets/img/profile/portfolio.jpg" alt="Portfolio project image" class="portfolio-image" loading="lazy">
+                <div class="portfolio-overlay">
+                  <button class="portfolio-action-btn portfolio-preview-btn" data-type="image" data-src="assets/img/profile/portfolio.jpg" title="View image">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>Career Highlights</h4>
+                <p class="portfolio-type"><i class="bi bi-image"></i> Image</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item: Video -->
+          <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-card-content">
+              <div class="portfolio-video-wrapper">
+                <video class="portfolio-video-thumb" preload="metadata">
+                  <source src="assets/img/profile/vid 1.mp4" type="video/mp4">
+                </video>
+                <div class="portfolio-overlay">
+                  <button class="portfolio-action-btn portfolio-preview-btn" data-type="video" data-src="assets/img/profile/vid 1.mp4" title="Play video">
+                    <i class="bi bi-play-circle-fill"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>Project Presentation</h4>
+                <p class="portfolio-type"><i class="bi bi-film"></i> Video</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Item: PDF -->
+          <div class="portfolio-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="portfolio-card-content">
+              <div class="portfolio-pdf-wrapper">
+                <div class="pdf-icon-holder">
+                  <i class="bi bi-file-pdf"></i>
+                </div>
+                <div class="portfolio-overlay">
+                  <button class="portfolio-action-btn portfolio-preview-btn" data-type="pdf" data-src="assets/img/profile/MBA_PROJECT.pdf" title="View PDF">
+                    <i class="bi bi-eye-fill"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>MBA Project</h4>
+                <p class="portfolio-type"><i class="bi bi-file-text"></i> Document</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Portfolio Section -->
+
+    <!-- Portfolio Preview Modal -->
+    <div id="portfolioModal" class="portfolio-modal" role="dialog" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+        <div class="modal-body">
+          <img id="modalImage" class="modal-image" alt="Preview" style="display: none;">
+          <video id="modalVideo" class="modal-video" controls style="display: none;">
+            <source id="modalVideoSource" type="video/mp4">
+          </video>
+          <iframe id="modalPdf" class="modal-pdf" style="display: none;"></iframe>
+        </div>
+      </div>
+    </div><!-- /Portfolio Preview Modal -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -553,7 +621,7 @@
             <div class="contact-form-container">
               <div class="form-intro">
                 <h2>Let's Start a Conversation</h2>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+                <p></p>
               </div>
 
               <form action="https://formsubmit.co/ashrafnk1@gmail.com" method="POST" class="contact-form">

@@ -107,6 +107,83 @@
   window.addEventListener('load', aosInit);
 
   /**
+   * Portfolio Modal Functionality
+   */
+  function initPortfolioModal() {
+    const modal = document.getElementById('portfolioModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoSource = document.getElementById('modalVideoSource');
+    const modalPdf = document.getElementById('modalPdf');
+    const modalClose = document.querySelector('.modal-close');
+    const previewBtns = document.querySelectorAll('.portfolio-preview-btn');
+
+    if (!modal || previewBtns.length === 0) return;
+
+    function openModal(type, src) {
+      // Hide all elements
+      modalImage.style.display = 'none';
+      modalVideo.style.display = 'none';
+      modalPdf.style.display = 'none';
+
+      // Show appropriate element
+      if (type === 'image') {
+        modalImage.src = src;
+        modalImage.style.display = 'block';
+      } else if (type === 'video') {
+        modalVideoSource.src = src;
+        modalVideo.load();
+        modalVideo.style.display = 'block';
+      } else if (type === 'pdf') {
+        modalPdf.src = src;
+        modalPdf.style.display = 'block';
+      }
+
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = 'auto';
+      modalVideo.pause();
+    }
+
+    // Attach click handlers to preview buttons
+    previewBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const type = btn.dataset.type;
+        const src = btn.dataset.src;
+        openModal(type, src);
+      });
+    });
+
+    // Close modal on close button click
+    if (modalClose) {
+      modalClose.addEventListener('click', closeModal);
+    }
+
+    // Close modal on outside click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  window.addEventListener('load', initPortfolioModal);
+
+  /**
    * Animate the skills items on reveal
    */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
