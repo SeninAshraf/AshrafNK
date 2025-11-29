@@ -1,0 +1,7 @@
+{
+  "command": "start index.html",
+  "serverUrl": "file:///C:/Users/Senin%20Ashraf/Documents/Ashraf/MinimalFolio/index.html",
+  "authenticateProxy": false,
+  "autoDetectDevServer": false,
+  "commitMode": "commits"
+}

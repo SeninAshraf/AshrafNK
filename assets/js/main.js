@@ -61,12 +61,14 @@
   });
 
   /**
-   * Preloader
+   * Intro Loader
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
+  const introLoader = document.querySelector('#intro-loader');
+  if (introLoader) {
     window.addEventListener('load', () => {
-      preloader.remove();
+      setTimeout(() => {
+        introLoader.remove();
+      }, 2000);
     });
   }
 
